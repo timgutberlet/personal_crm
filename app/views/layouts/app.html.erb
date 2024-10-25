@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PersonalCRM Dashboard</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body class="flex h-screen overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white border-r">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold">Personal CRM</h2>
+      </div>
+      <nav class="mt-6">
+        <div class="px-4 mb-2">
+          <p class="text-xs font-semibold text-gray-600 uppercase">Menu</p>
+        </div>
+        <a href="#" class="flex items-center px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50">
+          <%= icon('layout-dashboard', class: 'mr-3 h-5 w-5') %>
+          Dashboard
+        </a>
+        <a href="#" class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">
+          <%= icon('users', class: 'mr-3 h-5 w-5') %>
+          Contacts
+        </a>
+        <a href="#" class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">
+          <%= icon('calendar', class: 'mr-3 h-5 w-5') %>
+          Calendar
+        </a>
+        <a href="#" class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">
+          <%= icon('message-square', class: 'mr-3 h-5 w-5') %>
+          Messages
+        </a>
+        <a href="#" class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">
+          <%= icon('target', class: 'mr-3 h-5 w-5') %>
+          Goals
+        </a>
+        <a href="#" class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">
+          <%= icon('gift', class: 'mr-3 h-5 w-5') %>
+          Gift Ideas
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex flex-col flex-1 overflow-hidden">
+      <!-- Header -->
+      <header class="flex items-center justify-between px-6 py-4 bg-white border-b">
+        <div class="flex items-center">
+          <button class="text-gray-500 focus:outline-none lg:hidden">
+            <%= icon('menu', class: 'h-6 w-6') %>
+          </button>
+        </div>
+        <div class="flex items-center">
+          <div class="relative">
+            <%= form_with(url: "#", method: :get, local: true, class: "relative") do |f| %>
+              <%= f.text_field :query, placeholder: "Search contacts...", class: "py-2 pl-10 pr-4 text-sm text-gray-600 bg-gray-100 rounded-md focus:outline-none focus:bg-white focus:text-gray-900" %>
+              <%= icon('search', class: 'absolute left-3 top-2 h-5 w-5 text-gray-400') %>
+            <% end %>
+          </div>
+          <button class="ml-6 text-gray-500 focus:outline-none">
+            <%= icon('bell', class: 'h-6 w-6') %>
+          </button>
+          <!-- Add user avatar and dropdown here -->
+        </div>
+      </header>
+
+      <!-- Main content -->
+      <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100">
+        <%= yield %>
+      </main>
+    </div>
+  </body>
+</html>

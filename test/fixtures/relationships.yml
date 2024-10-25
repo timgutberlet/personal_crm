@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contact: one
+  related_contact: one
+  relationship_type: MyString
+  notes: MyText
+
+two:
+  contact: two
+  related_contact: two
+  relationship_type: MyString
+  notes: MyText

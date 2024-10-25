@@ -1,0 +1,39 @@
+.bg-gradient-primary {
+  background: linear-gradient(to right, #007bff, #6610f2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+/* Add custom styles if not using Tailwind CSS */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6); /* from-blue-500 to-purple-600 */
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-blue-600 {
+  color: #2563eb;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: #f3f4f6;
+}
+
+.hover\:text-blue-600:hover {
+  color: #2563eb;
+}
+
+.border-white {
+  border-color: #ffffff;
+}
