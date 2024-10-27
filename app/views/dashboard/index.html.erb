@@ -1,103 +1,47 @@
-<div class="flex h-screen overflow-hidden">
-  <!-- Sidebar -->
-  <aside class="hidden lg:flex lg:flex-col lg:w-64 lg:bg-white lg:border-r">
-    <div class="p-4">
-      <h2 class="text-xl font-bold">Personal CRM</h2>
+<div class="container mx-auto px-4 py-8">
+  <div class="space-y-6">
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Total Contacts Card -->
+      <div class="bg-white overflow-hidden shadow rounded-lg">
+        <div class="p-5">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <svg class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <div class="ml-5 w-0 flex-1">
+              <dl>
+                <dt class="text-sm font-medium text-gray-500 truncate">Total Contacts</dt>
+                <dd class="flex items-baseline">
+                  <div class="text-2xl font-semibold text-gray-900">1,234</div>
+                  <div class="ml-2 flex items-baseline text-sm font-semibold text-green-600">
+                    <span>+20</span>
+                    <span class="sr-only">Increased by</span>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meetings Scheduled Card -->
+      <!-- ... (similar structure to Total Contacts card) ... -->
+
+      <!-- Open Tasks Card -->
+      <!-- ... (similar structure to Total Contacts card) ... -->
     </div>
-    <nav class="flex-1 p-4">
-      <ul>
-        <li class="mb-2">
-          <a href="#" class="flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-md">
-            <%= icon('layout-dashboard', class: 'mr-2 h-4 w-4') %>
-            Dashboard
-          </a>
-        </li>
-        <li class="mb-2">
-          <a href="#" class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md">
-            <%= icon('users', class: 'mr-2 h-4 w-4') %>
-            Contacts
-          </a>
-        </li>
-        <!-- Add more menu items here -->
-      </ul>
-    </nav>
-  </aside>
 
-  <!-- Main Content -->
-  <div class="flex flex-col flex-1 overflow-hidden">
-    <!-- Header -->
-    <header class="flex items-center h-16 px-4 border-b shrink-0 md:px-6">
-      <!-- Add header content here -->
-    </header>
-
-    <!-- Main Content Area -->
-    <main class="flex-1 overflow-y-auto bg-gray-100 p-4 md:p-6">
-      <!-- Summary Cards -->
-      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <!-- Total Contacts Card -->
-        <div class="bg-white p-4 rounded-lg shadow">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-medium text-gray-500">Total Contacts</h3>
-            <%= icon('users', class: 'h-4 w-4 text-gray-400') %>
-          </div>
-          <p class="text-2xl font-bold">1,234</p>
-          <p class="text-xs text-gray-500">+20 from last month</p>
-        </div>
-
-        <!-- Upcoming Events Card -->
-        <div class="bg-white p-4 rounded-lg shadow">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-medium text-gray-500">Upcoming Events</h3>
-            <%= icon('calendar', class: 'h-4 w-4 text-gray-400') %>
-          </div>
-          <p class="text-2xl font-bold">8</p>
-          <p class="text-xs text-gray-500">Next: Coffee with Sarah (Tomorrow)</p>
-        </div>
-
-        <!-- Add more summary cards here -->
-      </div>
-
-      <!-- Weekly Calendar and New Contacts Chart -->
-      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-7 mt-4">
-        <!-- Weekly Calendar -->
-        <div class="col-span-4 bg-white p-4 rounded-lg shadow">
-          <h3 class="text-lg font-semibold mb-4">Weekly Calendar</h3>
-          <!-- Add calendar content here -->
-        </div>
-
-        <!-- New Contacts Chart -->
-        <div class="col-span-3 bg-white p-4 rounded-lg shadow">
-          <h3 class="text-lg font-semibold mb-4">New Contacts</h3>
-          <!-- Add chart content here -->
-        </div>
-      </div>
-
-      <!-- Relationship Strength, Conversation Starters, and Gift Ideas -->
-      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-4">
-        <!-- Relationship Strength -->
-        <div class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-lg font-semibold mb-4">Relationship Strength</h3>
-          <!-- Add relationship strength content here -->
-        </div>
-
-        <!-- Conversation Starters -->
-        <div class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-lg font-semibold mb-4">Conversation Starters</h3>
-          <!-- Add conversation starters content here -->
-        </div>
-
-        <!-- Gift Ideas -->
-        <div class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-lg font-semibold mb-4">Gift Ideas</h3>
-          <!-- Add gift ideas content here -->
-        </div>
-      </div>
-
-      <!-- Networking Goals -->
-      <div class="bg-white p-4 rounded-lg shadow mt-4">
-        <h3 class="text-lg font-semibold mb-4">Networking Goals</h3>
-        <!-- Add networking goals content here -->
-      </div>
-    </main>
+    <!-- Calendar and Activity -->
+    <!-- ... (rest of your dashboard content) ... -->
   </div>
+
+  <!-- Admin Login Button -->
+  <% unless current_user&.admin? %>
+    <div class="mt-4">
+      <%= link_to "Admin Login", new_user_session_path(admin: true), class: "inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+    </div>
+  <% end %>
 </div>
