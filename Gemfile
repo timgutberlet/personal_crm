@@ -74,3 +74,5 @@ group :test do
   gem 'minitest'
   gem 'minitest-rails'
 end
+
+gem 'dotenv-rails'
