@@ -22,4 +22,10 @@ class User < ApplicationRecord
   def admin?
     admin == true
   end
+
+  # Add this method to the User model
+  def gravatar_url
+    hash = Digest::MD5.hexdigest(email.downcase)
+    "https://www.gravatar.com/avatar/#{hash}?d=identicon"
+  end
 end
